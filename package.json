@@ -4,8 +4,11 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "server": "nodemon server.js"
+    "client-install": "npm install --prefix client",
+    "start": "node auth/server",
+    "server": "nodemon auth/server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +22,7 @@
     "mongoose": "^6.0.2",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
+    "redux-devtools-extension": "^2.13.9",
     "validator": "^13.6.0"
   },
   "devDependencies": {
