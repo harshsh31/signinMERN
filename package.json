@@ -13,7 +13,7 @@
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm && run build"
   },
   "engines": {
-    "node": "10.16.0"
+    "node": "12.13.1"
   },
   "author": "",
   "license": "ISC",
