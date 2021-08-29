@@ -9,7 +9,8 @@
     "start": "node auth/server",
     "server": "nodemon auth/server",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm && run build"
   },
   "author": "",
   "license": "ISC",
