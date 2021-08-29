@@ -13,6 +13,7 @@ const User = require("../../models/User");
 // @desc Register user
 // @access Public
 router.post("/register", (req, res) => {
+  console.log(req.body);
   // Form validation
   const { errors, isValid } = validateRegisterInput(req.body);
   // Check validation
@@ -40,6 +41,7 @@ router.post("/register", (req, res) => {
             .catch((err) => console.log(err));
         });
       });
+      return res.status(200);
     }
   });
 });

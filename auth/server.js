@@ -6,6 +6,7 @@ const app = express();
 const passport = require("passport");
 const users = require("./routes/api/users");
 // Bodyparser middleware
+app.use(bodyParser.json());
 app.use(
   bodyParser.urlencoded({
     extended: false,
